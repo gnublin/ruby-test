@@ -10,6 +10,11 @@ require 'yaml'
 
 Bundler.require :default, :development
 
+ENV['PGHOST'] = ENV.fetch('POSTGRESQL_ADDON_HOST')
+ENV['PGPASSWORD']= ENV.fetch('POSTGRESQL_ADDON_PASSWORD')
+ENV['PGUSER'] = ENV.fetch('POSTGRESQL_ADDON_USER')
+ENV['PGDATABASE'] = ENV.fetch('POSTGRESQL_ADDON_DB')
+
 class RubyTest < Sinatra::Application
     get '/' do
     'Hello world!'
