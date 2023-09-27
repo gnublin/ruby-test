@@ -8,7 +8,8 @@ require 'sinatra/base'
 
 Bundler.require :default, :development
 
-
-get '/' do
-  'Hello world!'
+class RubyTest < Sinatra::Application
+    get '/' do
+    'Hello world!'
+    end
 end
