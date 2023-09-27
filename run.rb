@@ -23,7 +23,7 @@ class RubyTest < Sinatra::Application
     get '/pg-ping' do
       conn = PG.connect()
       res = []
-      a = conn.exec( "SELECT * FROM pg_stat_activity" )
+      a = conn.exec( "SELECT 1;" )
       a.each_row do |row|
         res << row
       end
