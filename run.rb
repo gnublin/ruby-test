@@ -10,7 +10,7 @@ require 'yaml'
 
 Bundler.require :default, :development
 
-ENV['PGPG'] = ENV.fetch('PGPG')
+exit 1
 
 ENV['PGHOST'] = ENV.fetch('POSTGRESQL_ADDON_HOST', '')
 ENV['PGPASSWORD']= ENV.fetch('POSTGRESQL_ADDON_PASSWORD', '')
