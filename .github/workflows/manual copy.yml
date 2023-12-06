@@ -36,5 +36,6 @@ jobs:
         run: sleep 3s
 
   reareet:
-    needs: sleepa
+    needs: [ sleepa, areet ]
+    if: failure()
     uses: gnublin/ruby-test/.github/workflows/manual.yml@main
