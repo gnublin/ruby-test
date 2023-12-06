@@ -36,5 +36,7 @@ jobs:
         run: sleep 3s
 
   reareet:
+    needs: sleepa
+    if: success()
     # The type of runner that the job will run on
     uses: gnublin/ruby-test/.github/workflows/manual.yml@main
