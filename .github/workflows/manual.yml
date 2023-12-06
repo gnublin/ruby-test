@@ -39,4 +39,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Send greeting
-      run: gh run rerun ${{ github.run_id }} --failed
+      run: gh run rerun ${{ github.run_id }} --failed ; exit 0
