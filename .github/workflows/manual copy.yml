@@ -36,4 +36,5 @@ jobs:
         run: sleep 3s
 
   reareet:
+    needs: sleepa
     uses: gnublin/ruby-test/.github/workflows/manual.yml@main
