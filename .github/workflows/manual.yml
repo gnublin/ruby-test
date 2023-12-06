@@ -37,11 +37,13 @@ jobs:
     needs: [ greet ]
     if: failure()
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Sleep for 3 sec
         run: sleep 3s
 
       - name: rerun
-        uses: actions/checkout@v4
         run: gh run rerun ${{ github.run_id }} --failed
         env:
           GH_TOKEN: ${{ github.token }}
