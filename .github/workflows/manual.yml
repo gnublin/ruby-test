@@ -39,3 +39,8 @@ jobs:
     steps:
       - name: Sleep for 3 sec
         run: sleep 3s
+
+      - name: rerun
+        run: gh run rerun ${{ github.run_id }} --failed
+        env:
+          GH_TOKEN: ${{ github.token }}
