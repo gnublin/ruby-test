@@ -30,4 +30,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}" ; exit 1
+      run: echo "Hello ${{ inputs.name }}" 
